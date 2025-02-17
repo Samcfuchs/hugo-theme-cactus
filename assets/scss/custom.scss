@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" );
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+$font-family-body: "Nunito", cursive;
+$font-family-header: "Montserrat";
+$font-family-mono: "Inconsolata";
+
+$color-header: #bd93f9;
+$font-size: 16px;
+
+//@import 'style.css'
+
+img {
+    border: 30px solid white;
+}
+
+.content {
+  h1 a,
+  .h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    color: $color-link;
+    font-weight: 800;
+
+  }
+}
+
+.content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+
+    color: $color-header;
+    font-family: $font-family-header;
+  }
+}
