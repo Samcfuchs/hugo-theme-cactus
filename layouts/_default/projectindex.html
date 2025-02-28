@@ -1,0 +1,33 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+<div id="projects">
+  <ul class="project-list">
+
+
+  {{ range .Pages.ByWeight }}
+    <a href="{{.Permalink}}">
+      <li class="project-item">
+        <div>
+          <h1>{{ if .Title }} {{ .Title }} {{ else }} Untitled Project {{ end }}</h1>
+          <p>{{ .Summary }}</p>
+
+          {{ if .Params.tools }}
+          <ul class="project-tools">
+            {{ range .Params.tools }} 
+            <li>{{.}}</li>
+            {{end}}
+          </ul>
+          {{ end }}
+        </div>
+      </li>
+    </a>
+  {{ end }}
+
+
+  </ul>
+  {{ if eq .Site.Params.showAllPostsArchive false }}
+    {{ partial "pagination.html" . }}
+  {{ end }}
+</div>
+{{ end }}
