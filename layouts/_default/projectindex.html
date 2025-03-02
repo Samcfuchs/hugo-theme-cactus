@@ -13,11 +13,7 @@
           <p>{{ .Summary }}</p>
 
           {{ if .Params.tools }}
-          <ul class="project-tools">
-            {{ range .Params.tools }} 
-            <li>{{.}}</li>
-            {{end}}
-          </ul>
+            {{ partial "tags.html" . }}
           {{ end }}
         </div>
       </li>
