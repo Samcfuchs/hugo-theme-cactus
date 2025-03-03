@@ -1,0 +1,8 @@
+{{- $repo := .Get 0 -}}
+{{- $url := printf "https://api.github.com/repos/Samcfuchs/%s/readme" $repo -}}
+{{- with resources.GetRemote $url -}}
+  {{- $json := .Content | unmarshal -}}
+  {{- with $json.content -}}
+    {{- . | base64Decode | markdownify -}}
+  {{- end -}}
+{{- end -}}
