@@ -79,6 +79,7 @@ ul.project-tools {
   padding: 0;
   display: flex;
   gap: 10px;
+  overflow-x: scroll;
 
   li {
     display: inline-block;
