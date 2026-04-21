@@ -80,6 +80,7 @@ ul.project-tools {
   display: flex;
   gap: 10px;
   overflow-x: scroll;
+  scrollbar-width: none;
 
   li {
     display: inline-block;
